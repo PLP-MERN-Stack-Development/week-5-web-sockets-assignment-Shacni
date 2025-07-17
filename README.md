@@ -1,78 +1,260 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19951560&assignment_repo_type=AssignmentRepo)
-# Real-Time Chat Application with Socket.io
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19823244&assignment_repo_type=AssignmentRepo)
+# 🔄 Real-Time Chat Application with Socket.io
 
-This assignment focuses on building a real-time chat application using Socket.io, implementing bidirectional communication between clients and server.
+A fully functional real-time chat application built with Socket.io, React, and Express.js that demonstrates bidirectional communication between clients and server.
 
-## Assignment Overview
+## 🚀 Features Implemented
 
-You will build a chat application with the following features:
-1. Real-time messaging using Socket.io
-2. User authentication and presence
-3. Multiple chat rooms or private messaging
-4. Real-time notifications
-5. Advanced features like typing indicators and read receipts
+### ✅ Task 1: Project Setup
+- [x] Node.js server with Express
+- [x] Socket.io server configuration
+- [x] React front-end application
+- [x] Socket.io client setup
+- [x] Basic client-server connection
 
-## Project Structure
+### ✅ Task 2: Core Chat Functionality
+- [x] **User Authentication**: Simple username-based authentication
+- [x] **Global Chat Room**: All users can send and receive messages
+- [x] **Message Display**: Messages show sender name and timestamp
+- [x] **Typing Indicators**: Shows when users are composing messages
+- [x] **Online/Offline Status**: Real-time user presence tracking
 
+### ✅ Task 3: Advanced Chat Features (3+ implemented)
+- [x] **Private Messaging**: Direct messages between users
+- [x] **Typing Indicators**: Real-time typing status
+- [x] **User Join/Leave Notifications**: System messages for user events
+- [x] **Message Delivery Acknowledgment**: Confirms message delivery
+
+### ✅ Task 4: Real-Time Notifications
+- [x] **Browser Notifications**: Web Notifications API integration
+- [x] **Sound Notifications**: Audio alerts for new messages
+- [x] **Unread Message Count**: Tracks unread messages
+- [x] **User Join/Leave Alerts**: Notifies when users enter/exit
+
+### ✅ Task 5: Performance and UX Optimization
+- [x] **Message Pagination**: Limits stored messages to prevent memory issues
+- [x] **Reconnection Logic**: Automatic reconnection with exponential backoff
+- [x] **Message Search**: Search functionality for finding messages
+- [x] **Connection Status**: Visual connection state indicators
+- [x] **Responsive Design**: Works on desktop and mobile devices
+
+## 🛠️ Technology Stack
+
+- **Backend**: Node.js, Express.js, Socket.io
+- **Frontend**: React, Vite
+- **Package Manager**: pnpm
+- **Real-time Communication**: Socket.io
+- **Notifications**: Web Notifications API
+
+## 📦 Installation & Setup
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- pnpm package manager
+
+### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/PLP-MERN-Stack-Development/week-5-web-sockets-assignment-DennisAmutsa.git
+   cd week-5-web-sockets-assignment-DennisAmutsa
+   ```
+
+2. **Install server dependencies**
+   ```bash
+   cd server
+   pnpm install
+   ```
+
+3. **Install client dependencies**
+   ```bash
+   cd ../client
+   pnpm install
+   ```
+
+4. **Start the development servers**
+
+   **Terminal 1 - Start the server:**
+   ```bash
+   cd server
+   pnpm run dev
+   ```
+   Server will run on: http://localhost:5000
+
+   **Terminal 2 - Start the client:**
+   ```bash
+   cd client
+   pnpm run dev
+   ```
+   Client will run on: http://localhost:5173
+
+## 🎯 How to Use
+
+1. **Join the Chat**
+   - Open the application in your browser
+   - Enter a username and click "Join"
+   - Enable notifications when prompted
+
+2. **Send Messages**
+   - Type your message in the input field
+   - Press Enter or click "Send"
+   - Messages appear in real-time for all users
+
+3. **Private Messaging**
+   - Click "Private" next to any user's name
+   - Send private messages that only you and that user can see
+   - Click "Cancel Private" to return to public chat
+
+4. **Search Messages**
+   - Use the search bar to find specific messages
+   - Results show sender and message content
+   - Click "Clear" to reset search
+
+5. **Notifications**
+   - Browser notifications appear when the tab is not active
+   - Sound notifications play for new messages
+   - Unread count shows in the title
+
+## 🔧 API Endpoints
+
+### Server Endpoints
+- `GET /` - Server status
+- `GET /api/messages` - Get all messages
+- `GET /api/users` - Get online users
+- `GET /api/messages/search?q=query` - Search messages
+
+### Socket Events
+- `user_join` - User joins chat
+- `send_message` - Send public message
+- `private_message` - Send private message
+- `typing` - Typing indicator
+- `disconnect` - User leaves
+
+## 📱 Features in Detail
+
+### Real-time Communication
+- Instant message delivery
+- Live typing indicators
+- Real-time user presence
+- Automatic reconnection
+
+### User Experience
+- Clean, responsive interface
+- Connection status indicators
+- Message delivery confirmation
+- Smooth scrolling to new messages
+
+### Notifications
+- Browser notifications (when tab inactive)
+- Sound alerts for new messages
+- Unread message counter
+- Visual indicators for connection status
+
+### Performance
+- Message pagination (100 message limit)
+- Efficient reconnection handling
+- Memory management
+- Optimized Socket.io configuration
+
+## 🚀 Deployment
+
+### Server Deployment (Render/Railway/Heroku)
+1. Set environment variables:
+   - `PORT`: Server port
+   - `CLIENT_URL`: Your client URL
+
+2. Deploy using your preferred platform
+
+### Client Deployment (Vercel/Netlify)
+1. Build the project:
+   ```bash
+   cd client
+   pnpm run build
+   ```
+
+2. Deploy the `dist` folder to your platform
+
+## 📸 Screenshots
+
+  ![Login Screen](./screenshots/login.png)
+  ![Chat Interface](./screenshots/chat-ui.png)
+  ![Private Messaging](./screenshots/private-message.gif)
+
+## 🤝 Contributing
+
+This is an assignment project, but feel free to fork and improve!
+
+## 📄 License
+
+MIT License - feel free to use this code for learning purposes.
+
+## 👨‍💻 Author
+
+**Dennis Amutsa**
+- GitHub: [Shacni](https://github.com/Shacni)
+
+---
+
+**Note**: This project demonstrates advanced Socket.io implementation with real-time features, notifications, and performance optimizations as required by the Week 5 assignment. 
+
+---
+
+## 1. **How WebSocket Messaging Works in Your App**
+
+- **Client (browser)** connects to the server using Socket.io.
+- When you send a message in the chat UI, the client emits a socket event (e.g., `send_message`) to the server.
+- The **server** receives this event, processes the message, saves it to the database, and broadcasts it to all connected clients (or just the intended recipient for private messages).
+- All clients receive the new message in real time.
+
+---
+
+## 2. **You Can’t Use Postman for WebSocket Events**
+
+- Postman is for HTTP requests (GET, POST, etc.), not for WebSocket events.
+- To test WebSocket events, you need:
+  - Your chat app’s UI (the easiest way)
+  - Or a tool like [Socket.io Tester](https://amritb.github.io/socketio-client-tool/) or [websocat](https://github.com/vi/websocat) (for advanced users)
+
+---
+
+## 3. **How to Test WebSocket Messaging**
+
+### **A. Using Your Chat App UI (Recommended)**
+1. **Start your server and client** as before.
+2. **Open your app in two browser windows/tabs** at [http://localhost:5173](http://localhost:5173).
+3. **Log in as two different users.**
+4. **Send messages**—you’ll see them appear in real time in both windows.
+
+### **B. Using a Socket.io Client Tool (Optional/Advanced)**
+- Go to [Socket.io Tester](https://amritb.github.io/socketio-client-tool/).
+- Enter your server URL (e.g., `http://localhost:5000`).
+- Connect and emit events like `send_message` with the required data.
+- You’ll need to know the exact event names and payloads your server expects.
+
+---
+
+## 4. **Example: How Your Client Sends a Message (in code)**
+
+```js
+<code_block_to_apply_changes_from>
 ```
-socketio-chat/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # UI components
-│   │   ├── context/        # React context providers
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── pages/          # Page components
-│   │   ├── socket/         # Socket.io client setup
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Node.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Socket event handlers
-│   ├── models/             # Data models
-│   ├── socket/             # Socket.io server setup
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week5-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+## 5. **Summary Table**
 
-## Files Included
+| Action                | How to Test                |
+|-----------------------|---------------------------|
+| Fetch messages        | Postman GET /api/messages |
+| Send/receive messages | Chat app UI (WebSocket)   |
+| Private messaging     | Chat app UI               |
+| Typing indicators     | Chat app UI               |
 
-- `Week5-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Socket.io configuration templates
-  - Sample components for the chat interface
+---
 
-## Requirements
+**If you want to see or modify the code that handles WebSocket events, let me know which file you want to look at (e.g., `server/server.js` or `client/src/socket/socket.js`) and I can walk you through it!** 
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Basic understanding of React and Express
+## 🚀 Live Demo
 
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete both the client and server portions of the application
-2. Implement the core chat functionality
-3. Add at least 3 advanced features
-4. Document your setup process and features in the README.md
-5. Include screenshots or GIFs of your working application
-6. Optional: Deploy your application and add the URLs to your README.md
-
-## Resources
-
-- [Socket.io Documentation](https://socket.io/docs/v4/)
-- [React Documentation](https://react.dev/)
-- [Express.js Documentation](https://expressjs.com/)
-- [Building a Chat Application with Socket.io](https://socket.io/get-started/chat) 
+- Frontend: [https://your-chat-client.vercel.app](https://your-chat-client.vercel.app)
+- Backend: [https://your-chat-server.onrender.com](https://your-chat-server.onrender.com) 
