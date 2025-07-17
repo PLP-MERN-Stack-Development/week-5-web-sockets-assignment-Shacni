@@ -258,3 +258,41 @@ MIT License - feel free to use this code for learning purposes.
 
 - Frontend: [https://your-chat-client.vercel.app](https://your-chat-client.vercel.app)
 - Backend: [https://your-chat-server.onrender.com](https://your-chat-server.onrender.com) 
+
+---
+
+## **Step-by-Step: Push Your Changes**
+
+1. **Open a terminal** in your project root directory:
+   ```
+   C:\Users\HP\OneDrive\Desktop\PLP CODE\MERN STACK\week-5-web-sockets-assignment-Shacni
+   ```
+
+2. **Stage all changes** (including your updated `README.md`):
+   ```bash
+   git add .
+   ```
+
+3. **Commit your changes** with a message:
+   ```bash
+   git commit -m "Update README with live demo URLs"
+   ```
+
+   - If you see "nothing to commit," it means everything is already committed.
+
+4. **Push to GitHub**:
+   ```bash
+   git push
+   ```
+
+---
+
+## **Verify**
+
+- Go to your repo:  
+  [https://github.com/PLP-MERN-Stack-Development/week-5-web-sockets-assignment-Shacni](https://github.com/PLP-MERN-Stack-Development/week-5-web-sockets-assignment-Shacni)
+- Refresh and check that your latest changes (including the new "Live Demo" section) are visible in `README.md`.
+
+---
+
+**If you get any errors during these steps, copy and paste the error message here and I’ll help you fix it!** 
